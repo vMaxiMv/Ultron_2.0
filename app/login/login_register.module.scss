@@ -1,0 +1,121 @@
+
+.user {
+  width: 90px;
+  height: 90px;
+}
+
+.forgot_link {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #9ba2a4;
+  font-weight: 700;
+  text-decoration: none;
+  transition: .2s;
+}
+.forgot_link:hover {
+  color: #7e7d7d;
+}
+.form_box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 350px;
+  //padding: 50px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  box-shadow: -10px 23px 38px -9px rgba(0,0,0,0.75);
+  border-top-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+
+  background: #d2f0ff;
+  text-align: center;
+
+    h1{
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 28px;
+    }
+}
+.form_box input[type = "text"], .form_box input[type = "password"]{
+  //border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  font-size: 16px;
+  //border: none;
+  border-bottom: 2px solid #6fa0d2;
+  padding: 14px 15px;
+  width: 200px;
+  outline: none;
+  transition: 0.25s;
+}
+.form_box input[type = "text"]:focus,.form_box input[type = "password"]:focus{
+  width: 250px;
+  border-color: #336cc2;
+}
+
+.form_box input[type = "submit"]{
+  //border:0;
+  background: #6fa0d2;
+  color: #fff;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #6fa0d2;
+  width: 230px;
+  height: 30px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.form_box input[type = "submit"]:hover{
+  background: none;
+  color:black;
+}
+
+@media only screen and (max-width: 767px) {
+  .user {
+    width: 55px;
+    height: 55px;
+  }
+  .forgot_link{
+    font-size: 12px;
+  }
+
+  .form_box{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 250px;
+    box-shadow: -8px 13px 28px -9px rgba(0,0,0,0.75);
+
+    h1{
+      font-weight: 600;
+      font-size: 20px;
+    }
+  }
+  .form_box input[type = "text"], .form_box input[type = "password"]{
+    font-size: 12px;
+    padding: 12px 14px;
+    width: 180px;
+  }
+  .form_box input[type = "text"]:focus,.form_box input[type = "password"]:focus{
+    width: 210px;
+  }
+
+  .form_box input[type = "submit"]{
+
+    font-size: 12px;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #6fa0d2;
+    width: 190px;
+    height: 25px;
+  }
+}

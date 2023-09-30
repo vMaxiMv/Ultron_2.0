@@ -6,7 +6,7 @@ import Slider from "@/components/HelloPage/Slider/Slider";
 function HelloComponent() {
     return (
         <div className={HC.wrapper}>
-            <img src="/images/main_logo.svg" alt="logo" className={HC.logo} />
+            <img src="/images/robot-logo-in-circle.svg" alt="logo" className={HC.logo} />
             <div className={HC.main_block}>
             <Slider/>
             </div>
