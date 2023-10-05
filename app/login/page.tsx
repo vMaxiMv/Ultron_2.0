@@ -12,7 +12,7 @@ function Login() {
 
     return (
         <div className="wrapper">
-            <LoginComponent/>
+            <LoginComponent title={'Вход'} name={'login'} button={'Войти'} isRegisterFlag={true}/>
         </div>
     );
 }

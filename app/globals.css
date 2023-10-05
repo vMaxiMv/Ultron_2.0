@@ -28,3 +28,22 @@ a:hover  {
   min-height: 100vh;
   background: var(--main-bg-color);
 }
+.loader_container{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.loader{
+  width: 75px;
+  height: 75px;
+  border:10px solid #007bff;
+  border-radius: 50%;
+  border-left-color: #175cc2;
+  animation: loader 1.3s linear infinite;
+}
+@keyframes loader {
+  100% {
+    transform: rotate(360deg);
+  }
+}
