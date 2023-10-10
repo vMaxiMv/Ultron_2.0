@@ -5,8 +5,8 @@ import lr from "@/app/login/login_register.module.scss";
 import React from "react";
 import {SubmitHandler, useForm} from "react-hook-form";
 import {IAuthParams} from "@/types/loginRegisterTypes";
-import {useLoginRegister} from "@/api/authorization/auth";
 import {useRouter} from "next/navigation";
+import {useLoginRegister} from "@/hooks/queryHooks";
 
 interface IProps {
     title: string;
@@ -26,6 +26,7 @@ function LoginComponent({title,name, button,isRegisterFlag}:IProps) {
 
         try {
             const response = await mutation.mutateAsync({username,password,name})
+            router.push(response.redirect_url)
         } catch (error){
             console.error("Ошибка при авторизации", error)
         }
@@ -35,10 +36,10 @@ function LoginComponent({title,name, button,isRegisterFlag}:IProps) {
             <div className="loader"></div>
         </div>
     }
-    if(mutation.isSuccess){
-          router.push('/profile')
-        return null
-    }
+    // if(mutation.isSuccess){
+    //       router.push('/profile')
+    //     return null
+    // }
 
     return (
         <>
