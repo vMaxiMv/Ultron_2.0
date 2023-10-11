@@ -26,7 +26,7 @@ function LoginComponent({title,name, button,isRegisterFlag}:IProps) {
 
         try {
             const response = await mutation.mutateAsync({username,password,name})
-            router.push(response.redirect_url)
+            // router.push(response.redirect_url)
         } catch (error){
             console.error("Ошибка при авторизации", error)
         }
@@ -36,10 +36,10 @@ function LoginComponent({title,name, button,isRegisterFlag}:IProps) {
             <div className="loader"></div>
         </div>
     }
-    // if(mutation.isSuccess){
-    //       router.push('/profile')
-    //     return null
-    // }
+    if(mutation.isSuccess){
+          router.push('/profile')
+        return null
+    }
 
     return (
         <>

@@ -12,13 +12,4 @@ export const loginRegister = async ({username, password, name}:IAuthParams) =>{
 }
 
 
-export const useGetYourName = ()=>{
-    const url = `/get_username`;
-    const {data} =
-    useQuery(
-        ['userName'],
-         ()=>fetchData(url)
-    )
-    return {data}
 
-}

@@ -1,15 +1,18 @@
 'use client'
-import {useGetYourName} from "@/api/authorization/auth";
-import {useActivityButtons} from "@/hooks/queryHooks";
+
+import {useGetYourName} from "@/hooks/queryHooks";
+import ActivityButtonsToolbar from "@/components/ActivityList/ActivityButtonsToolbar";
 
 
 function Page() {
     const data1 = useGetYourName()
-    console.log(document.cookie)
-    const {data,isLoading} = useActivityButtons()
-    console.log(data)
+
+
     return (
-        <div className="wrapper">Главная страница</div>
+        <>
+        <div className="wrapper">Твоя, {data1} главная страница </div>
+        <ActivityButtonsToolbar/>
+            </>
     );
 }
 
