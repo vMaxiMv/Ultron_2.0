@@ -4,9 +4,10 @@ import HC from "@/components/HelloPage/HelloComp.module.scss";
 import lr from "@/app/login/login_register.module.scss";
 import React from "react";
 import {SubmitHandler, useForm} from "react-hook-form";
-import {IAuthParams} from "@/types/loginRegisterTypes";
+import {IAuthParams} from "@/types/MyTypes";
 import {useRouter} from "next/navigation";
 import {useLoginRegister} from "@/hooks/queryHooks";
+import Loader from "@/components/Loader/Loader";
 
 interface IProps {
     title: string;
@@ -32,9 +33,7 @@ function LoginComponent({title,name, button,isRegisterFlag}:IProps) {
         }
     }
     if(mutation.isLoading){
-        return <div className="loader_container">
-            <div className="loader"></div>
-        </div>
+        return <Loader/>
     }
     if(mutation.isSuccess){
           router.push('/profile')

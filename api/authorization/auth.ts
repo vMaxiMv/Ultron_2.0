@@ -1,6 +1,6 @@
 
 import axios from "axios";
-import {IAuthParams} from "@/types/loginRegisterTypes";
+import {IAuthParams} from "@/types/MyTypes";
 import {useMutation, useQuery} from "@tanstack/react-query";
 import {fetchData} from "@/api";
 import instance from "@/api/api";

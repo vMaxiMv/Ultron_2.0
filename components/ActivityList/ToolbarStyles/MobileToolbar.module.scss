@@ -1,0 +1,66 @@
+@media screen and (max-width: 950px) {
+  .Mobile_Menu{
+    display: flex;
+  }
+  .burger_menu{
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top:30px;
+    left: 30px;
+  }
+
+  .line{
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+  }
+   .line1_open, .line2_open, .line3_open{
+     opacity: 0;
+   }
+  .menu_overlay{
+    position: fixed;
+    top: 0;
+    right: 0; /* Поместите окно в правый верхний угол */
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .close_btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute; /* Добавьте абсолютное позиционирование */
+    top: 35px;
+    right: 35px;
+    z-index: 1; /* Установим высокий z-index */
+
+    .cross_angle{
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 0;
+    }
+
+    .line1{
+      transform: translateY(-50%) rotate(45deg);
+    }
+    .line2{
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+}

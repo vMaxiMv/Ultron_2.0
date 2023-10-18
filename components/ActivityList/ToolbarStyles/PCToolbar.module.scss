@@ -1,0 +1,86 @@
+.menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25vw;
+  height: 100vh;
+  position:absolute;
+  left: -24vw;
+  background-color: rgba(20,20,20,0.5);
+  overflow: hidden;
+  backdrop-filter: blur(1em);
+  border-right: 16px solid #ffffff;
+  transition: all 0.5s ease;
+  opacity: 1;
+
+  &:hover{
+    left:0;
+    opacity: 1;
+    border-right:0px solid transparent;
+  }
+}
+
+.menuVisible{
+  left: 0;
+}
+.list_menu li{
+  margin: 10px 0;
+}
+.title h2{
+  font-size: 30px;
+  margin-bottom: 30px;
+  color:#fff;
+}
+.Mobile_Menu{
+  display: none;
+}
+
+.activity_buttons {
+  display: block; /* Делаем кнопку блочным элементом, чтобы можно было применить выравнивание текста */
+  width: fit-content; /* Ширина кнопки будет автоматически подстраиваться под контент */
+  height: fit-content;
+  margin: 10px auto; /* Выравниваем кнопки по центру с отступами сверху и снизу */
+  background-color: transparent;
+  border: none;
+  padding: 20px;
+  font-size: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+
+  &::before{
+    content: ''; /* Добавляем пустой контент для псевдоэлемента */
+    position: absolute;
+    bottom: -2px; /* Сдвигаем псевдоэлемент снизу на 2px (начальное положение) */
+    left: 0; /* Позиционируем слева */
+    width: 0; /* Начальная ширина псевдоэлемента */
+    height: 2px; /* Толщина подчеркивания */
+    background-color: #ffffff;
+    transition: width 0.3s;
+  }
+
+  &:hover::before{
+    width: 100%;
+  }
+}
+
+.add_activity{
+  display: block; /* Делаем кнопку блочным элементом, чтобы можно было применить выравнивание текста */
+  width: fit-content; /* Ширина кнопки будет автоматически подстраиваться под контент */
+  border: none;
+  background-color: transparent;
+  margin: 20px auto;
+  cursor: pointer;
+}
+.add_activity_img{
+  width: 40px;
+  height: 40px;
+}
+
+@media screen  and (max-width: 950px){
+  .menu{
+    display: none;
+  }
+}

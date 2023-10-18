@@ -1,7 +1,8 @@
 import {useMutation, useQuery} from "@tanstack/react-query";
 import {loginRegister} from "@/api/authorization/auth";
-import {fetchActivityButtons} from "@/api/activityData/mainData";
+import {fetchActivityButtons} from "@/api/activityData/activityName";
 import {fetchData} from "@/api";
+import {fetchActivityData} from "@/api/activityData/activityData";
 
 
 export const useLoginRegister = () => {
@@ -9,7 +10,7 @@ export const useLoginRegister = () => {
 }
 
 export const useActivityButtons = ()=>{
-    return useQuery(['activityButtons'], fetchActivityButtons)
+    return useQuery(['activityButtons'], fetchActivityButtons,{refetchOnWindowFocus:false})
 }
 export const useGetYourName = ()=>{
     const url = `/get_username`;
@@ -20,4 +21,8 @@ export const useGetYourName = ()=>{
             {refetchOnWindowFocus:false}
         )
     return data?.data.userName
+}
+
+export const useGetActvityData = () =>{
+    return useMutation(['activityData'], fetchActivityData)
 }
