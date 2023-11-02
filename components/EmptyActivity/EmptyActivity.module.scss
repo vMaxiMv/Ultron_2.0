@@ -1,0 +1,21 @@
+.main_block{
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  align-items: center;
+}
+
+.title{
+  text-align: center;
+  width: 85%;
+  margin: 0 auto;
+
+}
+.sadRobot{
+  display: grid;
+  place-items: center;
+
+  img{
+    width: 500px;
+  }
+}

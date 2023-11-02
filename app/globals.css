@@ -23,6 +23,10 @@ a:hover  {
 :root{
   --main-bg-color: linear-gradient(45deg, #92b6d5, #a9bed0, #a7b8c5, #92b6d5);
 }
+h2{
+  font-size: 28px;
+  color: rgba(62, 64, 65, 0.63);
+}
 .wrapper{
   width: 100vw;
   min-height: 100vh;
@@ -37,9 +41,9 @@ a:hover  {
 .loader{
   width: 75px;
   height: 75px;
-  border:10px solid #007bff;
+  border:10px solid #61a4ec;
   border-radius: 50%;
-  border-left-color: #175cc2;
+  border-left-color: #3c74c7;
   animation: loader 1.3s linear infinite;
 }
 @keyframes loader {

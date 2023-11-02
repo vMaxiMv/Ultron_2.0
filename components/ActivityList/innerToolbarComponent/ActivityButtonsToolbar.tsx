@@ -1,30 +1,28 @@
 'use client'
-import React, {useState} from 'react';
-import {useActivityButtons, useGetActvityData} from "@/hooks/queryHooks";
+import React, {useEffect, useState} from 'react';
+import {useActivityButtons} from "@/hooks/queryHooks";
 import tb from '../ToolbarStyles/PCToolbar.module.scss'
 import {Simulate} from "react-dom/test-utils";
 import error = Simulate.error;
 import Loader from "@/components/Loader/Loader";
+import {useUserData} from "@/store/store";
 
 
 function ActivityButtonsToolbar() {
-    const {data,isSuccess} = useActivityButtons()
-    const {mutateAsync:getActivityData, isLoading, isError:getActivityDataError, data:activityData,isSuccess:activityDataSuccess } = useGetActvityData()
+    const [visibleButtonsFirst, setVisibleButtonsFirst] = useState(0); // По умолчанию показываем первые 13 кнопок
+    const [visibleButtonsLast, setVisibleButtonsLast] = useState(5)
+    const {data,isLoading} = useActivityButtons()
+    //const {mutateAsync:getActivityData, isLoading:activityDataLoading, isError:getActivityDataError, data:activityData,isSuccess:activityDataSuccess } = useGetActvityData()
     console.log(data)
+    const {UserData, fetchUserData} = useUserData()
     const buttonActivityHandleClick = async (key:string, value:string)=>{
-       await getActivityData({id:key,StatusView:false})
+        fetchUserData({id: key, StatusView: false})
     }
-    if(isLoading ){
-      console.log('Ждемссс')
-    }
-    if(activityDataSuccess){
-        console.log('Урааа')
-    }
+
     const ModalActivityHandleClick = ()=>{
 
     }
-    const [visibleButtonsFirst, setVisibleButtonsFirst] = useState(0); // По умолчанию показываем первые 13 кнопок
-    const [visibleButtonsLast, setVisibleButtonsLast] = useState(5)
+
     const handleMoreClick = () => {
         setVisibleButtonsFirst(visibleButtonsFirst + 5);
         setVisibleButtonsLast(visibleButtonsLast + 5)
@@ -33,7 +31,9 @@ function ActivityButtonsToolbar() {
         setVisibleButtonsFirst(visibleButtonsFirst - 5);
         setVisibleButtonsLast(visibleButtonsLast - 5)
     };
-    console.log(activityData)
+
+
+
 
     if(data) {
         return (
