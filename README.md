@@ -18,10 +18,11 @@
 
 ## Технологии
 
-* JavaScript 
-* CSS
-* React
-* Redux Toolkit
+* TypeScript 
+* SCSS
+* Next.js
+* React Query
+* Zustand
 * React Hook Form
 * React Chart.js 
 
@@ -29,7 +30,7 @@
 
 1. Клонировать репозиторий
 2. Установить зависимости  `npm install` или  `yarn install`
-3. Запустить   `npm start` или  `yarn start`
+3. Запустить   `npm run dev` или  `yarn dev`
 
 ## Использование
 
