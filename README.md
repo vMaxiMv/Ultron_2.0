@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Дневник тренировок
 
-## Getting Started
+Это веб-приложение для ведения дневника тренировок и мотивации пользователей.
 
-First, run the development server:
+## Описание
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Пользователи могут заводить свои активности (бег, йога, кроссфит) и добавлять к ним записи с данными о проделанных тренировках.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Также можно подключать друзей к своим активностям. Когда пользователь делает новую запись, уведомление получают подписанные на активность друзья. Это мотивирует не пропускать тренировки.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Возможности
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+* Создание собственных активностей
+* Добавление записей с данными о тренировках
+* Подключение друзей к активностям
+* Просмотр общего рейтинга пользователей
+* Просмотр личных достижений и статистики
 
-## Learn More
+## Технологии
 
-To learn more about Next.js, take a look at the following resources:
+* JavaScript 
+* CSS
+* React
+* Redux Toolkit
+* React Hook Form
+* React Chart.js 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Установка
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Клонировать репозиторий
+2. Установить зависимости  `npm install` или  `yarn install`
+3. Запустить   `npm start` или  `yarn start`
 
-## Deploy on Vercel
+## Использование
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Работа с приложением происходит через веб-интерфейс.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Основные сценарии:
+
+* Регистрация и авторизация
+* Создание активности
+* Добавление записи
+* Просмотр статистики и рейтинга
+
+
