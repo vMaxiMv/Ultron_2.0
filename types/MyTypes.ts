@@ -11,22 +11,17 @@ export interface IActivityData { // Типизация данных, котор�
 }
 
 export type TUserDataObj = { // Типизация главного объекта в котором лежат все данные об активности
-    amount:{
-        userId: Array<number>
-    },
+    amount: Record<string, number[]>
     date: Array<string>,
-    description: {
-        userId:Array<string>
-    },
-    entry_id:{
-        userId:Array<string>
-    }
-    name: {
-        userId: string
-    },
+    description: Record<string, string[]>
+    entry_id: Record<string, string>
+    name: Record<string, string>
     user_id: Array<number>
 }
+export type PartialUserDataObj = Partial<TUserDataObj>
+
 export type TUserDataStore = { // Типизация Store для получения и обновления UserData
     UserData: Partial<TUserDataObj>,
     fetchUserData:(data:IActivityData)=>Promise<void>
 }
+

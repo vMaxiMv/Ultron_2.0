@@ -13,11 +13,12 @@ function ActivityButtonsToolbar() {
     const [visibleButtonsLast, setVisibleButtonsLast] = useState(5)
     const {data,isLoading} = useActivityButtons()
     //const {mutateAsync:getActivityData, isLoading:activityDataLoading, isError:getActivityDataError, data:activityData,isSuccess:activityDataSuccess } = useGetActvityData()
-    console.log(data)
+
     const {UserData, fetchUserData} = useUserData()
     const buttonActivityHandleClick = async (key:string, value:string)=>{
         fetchUserData({id: key, StatusView: false})
     }
+    console.log(UserData)
 
     const ModalActivityHandleClick = ()=>{
 
